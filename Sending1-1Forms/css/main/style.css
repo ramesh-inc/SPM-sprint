@@ -1,0 +1,15 @@
+.form-body{
+  background: #c58711;
+  padding: 30px 15px
+}
+.section-heading{
+  background: #efae34;
+  text-align: center;
+  color: white;
+  box-shadow: 1px 1px 5px 0px black;
+  position: relative;
+}
+.section-heading>h1{
+  margin: 0;
+  padding: 15px;
+}
