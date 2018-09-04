@@ -11,7 +11,7 @@
 
     <!-- custom script and css import -->
     <script type="text/javascript" src="js/main/script.js"></script>
-    <link rel="stylesheet" href="css/main/style.css">
+    <link rel="stylesheet" href="css/main/style.css" type="text/css">
 
     <title>Send Form 1-1</title>
   </head>
@@ -20,7 +20,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h1>Send the Forms 1-1</h1>
+              <h1>Send the Form 1-1</h1>
             </div>
             <form class="form-body" action="upload.php" method="post" enctype="multipart/form-data">
 					

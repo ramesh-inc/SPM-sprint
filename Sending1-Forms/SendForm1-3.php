@@ -11,7 +11,7 @@
 
     <!-- custom script and css import -->
     <script type="text/javascript" src="js/main/script.js"></script>
-    <link rel="stylesheet" href="css/main/style.css">
+    <link rel="stylesheet" href="css/main/style.css" type="text/css">
 
     <title>Send Form 1-1</title>
   </head>

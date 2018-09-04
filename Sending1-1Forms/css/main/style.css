@@ -1,11 +1,13 @@
 .form-body{
   background: white !important;
-  padding: 30px 15px
+  padding: 30px 15px;
+  text-align:center
 }
 .section-heading{
   background: white !important;
-  text-align: center !important;
-  color: white !important;
+  
+  color: black !important;
+  text-align: center;
   box-shadow: 1px 1px 5px 0px black;
   position: relative !important;
 }
