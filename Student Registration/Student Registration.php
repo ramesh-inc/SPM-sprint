@@ -16,13 +16,51 @@
     <title>Student Registration</title>
   </head>
   <body>
+    <?php
+    if(isset($_POST['submit'])){
+
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $address = $_POST['address'];
+      $gender = $_POST['gender'];
+      $email = $_POST['email'];
+      $pw = $_POST['pw'];
+      $cpw = $_POST['cpw'];
+
+      if(!empty($fname) && !empty($lname) && !empty($address) && !empty($gender) && !empty($email) && !empty($pw) && !empty($cpw)){
+        if($pw != $cpw){
+          echo "<script type='text/javascript'>alert('Password Doesn't Match');</script>";
+        }else{
+          include 'DBConnection/dbcon.php';
+
+          $conn = dbCOn();
+
+          $sql = "INSERT INTO student (fname, lname, address, gender, email, password)
+                  VALUES ('$fname', '$lname', '$address','$gender','$email','$pw')";
+
+          if ($conn->query($sql) === TRUE) {
+              echo "<script type='text/javascript'>alert('New Record Created Successfully');</script>";
+          } else {
+              echo "Error: " . $sql . "<br>" . $conn->error;
+              echo "<script type='text/javascript'>alert('Error: '.$sql.'<br>'.$conn->error.'');</script>";
+          }
+
+          $conn->close();
+        }
+      }else{
+        echo "<script type='text/javascript'>alert('Fill all the fields');</script>";
+      }
+
+
+    }
+    ?>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
               <h1>Student Registration</h1>
             </div>
-            <form class="form-body" method="POST" action="">
+            <form class="form-body" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
               <div class="form-group">
                 <label for="exampleInputPassword1">First Name</label>
                 <input type="text" name="fname" class="form-control"  placeholder="Enter First Name">
@@ -57,33 +95,7 @@
                 <input type="submit" name="submit" class="btn btn-primary" value="Submit">
             </form>
 
-            <?php
-            if(isset($_POST['submit'])){
 
-              $fname = $_POST['fname'];
-              $lname = $_POST['lname'];
-              $address = $_POST['address'];
-              $gender = $_POST['gender'];
-              $email = $_POST['email'];
-              $pw = $_POST['pw'];
-              $cpw = $_POST['cpw'];
-
-              include 'DBConnection/dbcon.php';
-
-              $conn = dbCOn();
-
-              $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-                      VALUES ('John', 'Doe', 'john@example.com')";
-
-              if ($conn->query($sql) === TRUE) {
-                  echo "New record created successfully";
-              } else {
-                  echo "Error: " . $sql . "<br>" . $conn->error;
-              }
-
-              $conn->close();
-                          }
-            ?>
           </div>
         </div>
       </div>
