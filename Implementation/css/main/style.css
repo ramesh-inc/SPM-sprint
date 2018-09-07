@@ -1,12 +1,12 @@
 .form-body{
-  background: #c58711;
+  /* background: #c58711; */
   padding: 30px 15px
 }
 .section-heading{
-  background: #efae34;
+  /* background: #efae34; */
   text-align: center;
-  color: white;
-  box-shadow: 1px 1px 5px 0px black;
+  color: black;
+  /* box-shadow: 1px 1px 5px 0px black; */
   position: relative;
 }
 .section-heading>h1{
