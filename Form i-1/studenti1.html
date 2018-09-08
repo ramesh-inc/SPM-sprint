@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		input[type=text]{
+				width:50%;
+				padding: 12px 20px;
+				margin: 8px 0;			
+				border: 1px solid #ccc;
+				border-radius: 4px;	
+				align:center;	
+			}	
+			
+		.button {
+				
+				border: none;
+				color: white;
+				padding: 16px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				-webkit-transition-duration: 0.4s;
+				transition-duration: 0.4s;
+				cursor: pointer;
+				border-radius:8px;
+				background-color:#666363;
+				
+ 			}	
+       
+				
+					
+		.button1:hover {
+				background-color: #212020;
+			}			
+		.option{
+						
+				
+		}
+	</style>
+	</head>
+	
+	<title>FORM I-1</title>
+	
+	<body>
+		<div class="TOP">	
+			<div  style="float:right;width:600px">
+				<h1 style="padding-left:11px">FACULTY OF COMPUTING</h1>
+				<div>
+					<img src="SLIITlogo.png" style="height:590px"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2>FORM I-1 (Student Details)</h2>
+			<div style="float:center;">
+				<form action="studenti1.php" class="form" method="POST">
+					
+					<p class="form">Student`s ID  No.</p>
+					<input type="text" name="id"/>
+				
+					<p class="form">Student`s Name</p>
+					<input type="text" name="name"/>
+					
+					<p class="form">Address</p>
+					<input type="text" name="address"/>
+					
+					<p class="form">Home Phone</p>
+					<input type="text" name="hphone"/>
+					
+					<p class="form">Mobile Phone</p>
+					<input type="text" name="mphone"/>
+					
+					<p class="form">Email address</p>
+					<input type="text" name="email"/>
+					<p>*Use comma (,) to separate multiple e-mail addresses</p><br/>
+					
+					<p class="form">Semester</p>
+					<select name="semester" style="width:150px;height:50px;background-color:#DFDCDC;border-radius:10px">
+						<option value="1st">1st</option>
+						<option value="2nd">2nd</option>
+					</select>
+					
+					<p class="form">Year</p>
+					<select name="year" style="width:150px;height:50px;background-color:#DFDCDC;border-radius:10px">
+						<option value="1st">1st</option>
+						<option value="2nd">2nd</option>
+						<option value="3rd">3rd</option>
+						<option value="4th">4th</option>
+					</select>
+					
+					<p class="form">CGPA</p>
+					<input type="text" name="cgpa" /><br/>
+					
+					<button class="button button1" >Submit</button>
+					</form>
+			</div>	
+
+			
+		</div>
+	</body>
+</html>
