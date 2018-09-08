@@ -169,7 +169,7 @@
                                          echo '<script type="text/javascript"> alert ("New record created successfully") </script>';
                                    } else {
                                          echo '<script type="text/javascript"> alert ("Error: " . $sql . "<br>" . $conn->error;) </script>';
-                                   }
+                                   }    
 
                                          $conn->close();
                                     }else{
