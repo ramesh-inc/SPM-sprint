@@ -68,21 +68,30 @@
               $pw = $_POST['pw'];
               $cpw = $_POST['cpw'];
 
-              include 'DBConnection/dbcon.php';
+                if( !empty($fname) && !empty($lname) && !empty($address) && !empty($gender) && !empty($cpw) && !empty($email) && !empty($pw)){
+                    if( $cpw == $pw ) {
+                        include 'DBConnection/dbcon.php';
 
-              $conn = dbCOn();
+                          $conn = dbCOn();
 
-              $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-                      VALUES ('John', 'Doe', 'john@example.com')";
+                           $sql = "INSERT INTO Student (fname, lname, address, gender, email, password)
+                                   VALUES ('$fname', '$lname', '$address', '$gender', '$email', '$pw')";
 
-              if ($conn->query($sql) === TRUE) {
-                  echo "New record created successfully";
-              } else {
-                  echo "Error: " . $sql . "<br>" . $conn->error;
+                           if ($conn->query($sql) === TRUE) {
+                                echo '<script type="text/javascript"> alert ("New record created successfully") </script>';
+                           } else {
+                                echo '<script type="text/javascript"> alert ("Error: " . $sql . "<br>" . $conn->error;) </script>';
+                           }
+
+                          $conn->close();
+                    }else{
+                        echo '<script type="text/javascript"> alert ("Your password doesn\'t match.Try Again!") </script>';
+                    }
+                }else{
+                    echo '<script type="text/javascript"> alert ("You can\'t have empty fields...") </script>';
+                }
+
               }
-
-              $conn->close();
-                          }
             ?>
           </div>
         </div>
