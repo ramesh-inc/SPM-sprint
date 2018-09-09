@@ -95,7 +95,46 @@
                 <input type="submit" name="submit" class="btn btn-primary" value="Submit">
             </form>
 
+<<<<<<< HEAD:Implementation/Student Registration.php
+            <?php
+            if(isset($_POST['submit'])){
 
+              $fname = $_POST['fname'];
+              $lname = $_POST['lname'];
+              $address = $_POST['address'];
+              $gender = $_POST['gender'];
+              $email = $_POST['email'];
+              $pw = $_POST['pw'];
+              $cpw = $_POST['cpw'];
+
+                if( !empty($fname) && !empty($lname) && !empty($address) && !empty($gender) && !empty($cpw) && !empty($email) && !empty($pw)){
+                    if( $cpw == $pw ) {
+                        include 'DBConnection/dbcon.php';
+
+                          $conn = dbCOn();
+
+                           $sql = "INSERT INTO Student (fname, lname, address, gender, email, password)
+                                   VALUES ('$fname', '$lname', '$address', '$gender', '$email', '$pw')";
+
+                           if ($conn->query($sql) === TRUE) {
+                                echo '<script type="text/javascript"> alert ("New record created successfully") </script>';
+                           } else {
+                                echo '<script type="text/javascript"> alert ("Error: " . $sql . "<br>" . $conn->error;) </script>';
+                           }
+
+                          $conn->close();
+                    }else{
+                        echo '<script type="text/javascript"> alert ("Your password doesn\'t match.Try Again!") </script>';
+                    }
+                }else{
+                    echo '<script type="text/javascript"> alert ("You can\'t have empty fields...") </script>';
+                }
+
+              }
+            ?>
+=======
+
+>>>>>>> origin:Student Registration/Student Registration.php
           </div>
         </div>
       </div>
