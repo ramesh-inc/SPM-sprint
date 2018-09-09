@@ -1,0 +1,17 @@
+.form-body{
+  background: white !important;
+  padding: 30px 15px;
+  text-align:center
+}
+.section-heading{
+  background: white !important;
+  
+  color: black !important;
+  text-align: center;
+  box-shadow: 1px 1px 5px 0px black;
+  position: relative !important;
+}
+.section-heading>h1{
+  margin: 0;
+  padding: 15px;
+}

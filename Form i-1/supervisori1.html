@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	
+			
+		input[type=text]{
+				width:50%;
+				padding: 12px 20px;
+				margin: 8px 0;			
+				border: 1px solid #ccc;
+				border-radius: 4px;	
+				align:center;
+				
+				
+				
+			}	
+			
+		.button {
+				
+				border: none;
+				color: white;
+				padding: 16px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				-webkit-transition-duration: 0.4s;
+				transition-duration: 0.4s;
+				cursor: pointer;
+				border-radius:8px;
+				background-color:#666363;
+				
+ 			}	
+       
+				
+					
+		.button1:hover {
+				background-color: #212020;
+			}			
+		p.form{
+				font-family: Verdana, Helvetica, sans-serif;
+				font-size:15px;
+				
+			}
+		
+	</style>
+	</head>
+	
+	<title>FORM I-1</title>
+	
+	<body>
+		<div class="TOP">
+			<div  style="float:right;width:600px">
+				<h1 style="padding-left:11px">FACULTY OF COMPUTING</h1>
+				<div>
+					<img src="SLIITlogo.png" style="height:590px"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2>FORM I-1 (Company Details)</h2>
+			<div style="float:center;">
+				<form class="form" action="supervisori1.php" method="POST">
+					
+					<p class="form" >Student`s ID  No.</p>
+					<input type="text" name="sid"/>
+				
+					<p class="form" >Employer`s Name</p>
+					<input type="text" name="employer_name"/>
+					
+					<p class="form" >Employer`s Address</p>
+					<input type="text" name="employer_address"/>
+					
+					<p class="form" >Supervisor`s Name</p>
+					<input type="text" name="supervisor_name"/>
+					
+					<p class="form" >Supervisor`s Phone</p>
+					<input type="text" name="supervisor_phone"/>
+					
+					<p class="form" >Supervisor`s Title</p>
+					<input type="text" name="supervisor_title"/>
+					
+					<p class="form" >Supervisor`s Email</p>
+					<input type="text" name="supervisor_email" />
+					
+					<p class="form" >Internship Start Date</p>
+					<input type="date" name="sdate"/>
+					
+					<p class="form">Internship End Date</p>
+					<input type="date" name="edate" />		
+					<p>(Recommended period is no less than 6 months)</p><br/><br/>
+					
+					<p>Please list the tasks the students is expected to complete</p> 
+					<textarea class="textarea1" rows="5" cols="138" name="task"></textarea>
+					
+					<p>List what the student will learn during the internship period </p>
+					<textarea class="textarea2" rows="5" cols="138" name="learn"></textarea>
+					
+					<p>External Supervisor’s Name</p>
+					<input type="text" name="external_supervisor"/>
+					
+					<p>Date</p>
+					<input type="date" name="date"/><br/><br/>
+					
+					<button class="button button1">Submit</button>
+					</form>
+			</div>	
+
+			
+		</div>
+	</body>
+</html>

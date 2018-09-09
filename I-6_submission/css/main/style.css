@@ -1,0 +1,35 @@
+.form-body{
+    background: white !important;
+    padding: 30px 15px;
+    text-align:center
+  }
+  .section-heading{
+    background: white !important;
+  
+    color: black !important;
+    text-align: center;
+    box-shadow: 1px 1px 5px 0px black;
+    position: relative !important;
+  }
+  .section-heading>h1{
+    margin: 0;
+    padding: 15px;
+  }
+  .button {
+				
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:8px;
+    background-color:#666363;
+    
+   }
+  
