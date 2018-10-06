@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <h3>Faculty of Computing</h3>
+        <h4><strong>Form I-5</strong></h4>
+        <br/><br/>
+        <div class="text-center">
+            <h3>Final Evaluation of the Internship Student</h3>
+        </div>
+        <br/><br/>
+
+        <form action="feedback to IndMgr.php" class="form" method="POST">
+<div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="stu_id">Student ID:</label>
+                    <input type="text" class="form-control col-sm-8" name="stu_id" placeholder="Enter Student id">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="stu_name">Student's Name:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="stu_name" placeholder="Enter Student's Name"></div>
+                </div>
+            </div>
+            <br/><br/>
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label for="emp_name" class="col-sm-4">Employer's name:</label>
+                    <input type="text" class="form-control col-sm-8" name="emp_name" placeholder="Enter Employer's Name">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="sup_name" class="col-sm-4">Supervisor's Name:</label>
+                    <input type="text" class="form-control col-sm-8" name="sup_name" placeholder="Enter Supervisor's Name">
+                </div>
+            </div>
+            <br/><br/><br/>
+            <strong>describe the differences, if any, between student's initial contract and actual assignment which developed </strong>
+            <textarea class="form-control" rows="5" name="diff"></textarea>
+
+        
+        <br/><br/>
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Category</th>
+                <th>Above Average</th>
+                <th>Average</th>
+                <th>Below Average</th>
+                <th>Comments, Examples, Observations</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Volume of work</td>
+
+                <td class="text-center"><input type="radio" class="form-check-input" name="Volume_of_work" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Volume_of_work" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Volume_of_work" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment1"></td>
+            </tr>
+            <tr>
+                <td>Quality of work</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Quality_of_work" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Quality_of_work" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Quality_of_work" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment2"></td>
+            </tr>
+            <tr>
+                <td>Analytical ability</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Analytical_ability" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Analytical_ability" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Analytical_ability" value="Below Average"></td>
+                <td ><input type="text" class="form-control" name="comment3"></td>
+            </tr>
+
+            <tr>
+                <td>Ability to resolve problems</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="problem_resolving" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="problem_resolving" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="problem_resolving" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment4"></td>
+            </tr>
+
+            <tr>
+                <td>Accuracy and thoroughness</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Accuracy_thoroughness" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Accuracy_thoroughness" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Accuracy_thoroughness" value="Below Average"></td>
+                <td><input type="text" class="form-control " name="comment5"></td>
+            </tr>
+
+            <tr>
+                <td>Ability to work under pressure</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Work_Under_Pressure"  value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Work_Under_Pressure" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Work_Under_Pressure" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment6"></td>
+            </tr>
+
+            <tr>
+                <td>Oral communications</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Oral_communications" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Oral_communications" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Oral_communications" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment7"></td>
+            </tr>
+
+            <tr>
+                <td>Written communications</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Written_communications" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Written_communications" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Written_communications" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment8"></td>
+            </tr>
+
+            <tr>
+                <td>Original and critical thinking</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Original_critical_thinking" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Original_critical_thinking" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Original_critical_thinking" value="Below Average"></td>
+                <td><input type="text" class="form-control" name="comment9"></td>
+            </tr>
+
+            <tr>
+                <td>Ability to learn</td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Ability_to_learn" value="Above Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Ability_to_learn" value="Average"></td>
+                <td class="text-center"><input type="radio" class="form-check-input" name="Ability_to_learn" value="Below Average"></td>
+
+                <td><input type="text" class="form-control" name="comment10"></td>
+            </tr>
+
+
+
+
+
+            </tbody>
+        </table>
+
+
+        <br/><br/>
+
+        <strong>List positive personal characteristics (Business Acumen, Vigor, Adaptability, Teamwork, Leadership, Confidence, etc.)</strong>
+        <textarea class="form-control" rows="5" name="positive_char"></textarea>
+
+        <strong>List personal characteristics that will help the student in his/her professional development</strong>
+        <textarea class="form-control" rows="5" name="personal_char_dev"></textarea>
+
+        <strong>How effective has the Internship Program been in meeting the needs of your organization?</strong>
+        <textarea class="form-control" rows="5" name="effect_on_org"></textarea>
+
+        <strong>Please suggest ways you feel we could make our program more meaningful to the student and you, the employer. </strong>
+        <textarea class="form-control" rows="5" name="suggest"></textarea>
+
+        <strong>Please comment on the appropriateness of the student's academic training as it related to a position in your organization.</strong>
+        <textarea class="form-control" rows="5" name="comments"></textarea>
+
+        <strong>Any other comments about the student or on the Faculty Advisor:</strong>
+        <textarea class="form-control" rows="5" name="other_comm"></textarea>
+
+        <br/><br/>
+        <label>Overall Student performance</label>
+
+        
+            <label class="radio-inline">
+                <input type="radio" name="performance" value="Outstanding">Outstanding
+            </label>
+
+            <label class="radio-inline">
+                <input type="radio" name="performance" value="Very Good">Very Good
+            </label>
+
+
+            <label class="radio-inline">
+                <input type="radio" name="performance" value="Good">Good
+            </label>
+
+
+
+            <label class="radio-inline">
+                <input type="radio" name="performance" value="Marginal" >Marginal
+            </label>
+
+
+
+            <label class="radio-inline">
+                <input type="radio" name="performance" value="Unsatisfactory" >Unsatisfactory
+            </label>
+
+            <br/><br/>
+
+            <label>This report has been discussed with the student</label>
+            <br/><br/>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="ext_sup_name">External Supervisor Name:</label>
+                    <input type="text" class="form-control" name="ext_sup_name">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="text" class="form-control" name="date">
+                </div>
+            </div>
+
+            <button class="btn btn-dark" >Submit</button>
+
+
+
+
+        </form>
+        <br/><br/><br/><br/>
+
+    </div>
+
+
+</body>
+</html>
