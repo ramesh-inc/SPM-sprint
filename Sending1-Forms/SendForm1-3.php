@@ -1,39 +1,80 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!-- cdn script imports-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <!-- cdn css import -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- custom script and css import -->
-    <script type="text/javascript" src="js/main/script.js"></script>
-    <link rel="stylesheet" href="css/main/style.css" type="text/css">
-
-    <title>Send Form 1-1</title>
-  </head>
-  <body>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h1>Send the Forms 1-3</h1>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Send I-1 Form</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Send I-3 Form</h1>
+            <div id="login">
+                <h2>Send Email</h2>
+                <hr/>
+                <form action="SendForm1-1.php" method="post">
+                    <input type="text" placeholder="Enter your Gmail ID" name="email"/>
+                    <input type="password" placeholder="Enter your Gmail Password" name="password"/>
+                    <input type="text" placeholder="To : Email Id " name="toid"/>
+                    <input type="text" placeholder="Subject : " name="subject"/>
+                    <textarea rows="4" cols="50" placeholder="Enter Your Message..." name="message"></textarea>
+                    <input type="file" name="uploaded_file" id="uploaded_file" />
+                    <input type="submit" value="Send" name="send"/>
+                </form>
             </div>
-            <form class="form-body" action="upload.php" method="post" enctype="multipart/form-data">
-					
-				
-				Select the form to upload:
-				<input type="file" name="fileToUpload" id="fileToUpload">
-				<input type="submit" value="Upload File" name="submit">
-				
-					
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-          </div>
         </div>
-      </div>
-  </body>
+          <?php
+
+
+
+              require '../phpmailer/phpmailer/PHPMailerAutoload.php';
+              if(isset($_POST['send']))
+                  {
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    $to_id = $_POST['toid'];
+                    $message = $_POST['message'];
+                    $subject = $_POST['subject'];
+
+                    $mail = new PHPMailer;
+
+                    $mail->isSMTP();
+
+                    $mail->Host = 'smtp.gmail.com';
+
+                    $mail->Port = 587;
+
+                    $mail->SMTPSecure = 'tls';
+
+                    $mail->SMTPAuth = true;
+
+                    $mail->Username = $email;
+
+                    $mail->Password = $password;
+
+                    $mail->setFrom('from@example.com', 'First Last');
+
+                    $mail->addReplyTo('replyto@example.com', 'First Last');
+
+                    $mail->addAddress($to_id);
+
+                    $mail->Subject = $subject;
+
+                    $mail->msgHTML($message);
+
+                    if (isset($_FILES['uploaded_file']) &&
+                              $_FILES['uploaded_file']['error'] == UPLOAD_ERR_OK) {
+
+                  $mail->AddAttachment($_FILES['uploaded_file']['tmp_name'],
+                              $_FILES['uploaded_file']['name']);
+                            }
+
+                    if (!$mail->send()) {
+                       $error = "Mailer Error: " . $mail->ErrorInfo;
+                        ?><script>alert('<?php echo $error ?>');</script><?php
+                    }
+                    else {
+                       echo '<script>alert("Message sent!");</script>';
+                    }
+               }
+        ?>
+    </body>
 </html>

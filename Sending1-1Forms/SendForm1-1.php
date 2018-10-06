@@ -65,7 +65,7 @@
 
                   $mail->AddAttachment($_FILES['uploaded_file']['tmp_name'],
                               $_FILES['uploaded_file']['name']);
-}
+                            }
 
                     if (!$mail->send()) {
                        $error = "Mailer Error: " . $mail->ErrorInfo;
