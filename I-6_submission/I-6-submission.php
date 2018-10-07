@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="main">
-            <h1>Send I-3 Form</h1>
+            <h1>Send I-6 Form</h1>
             <div id="login">
                 <h2>Send Email</h2>
                 <hr/>
