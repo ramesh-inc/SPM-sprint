@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Send I-1 Form</title>
+        <title>Send I-6 Form</title>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
