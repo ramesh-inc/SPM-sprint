@@ -10,7 +10,7 @@
             <div id="login">
                 <h2>Send Email</h2>
                 <hr/>
-                <form action="SendForm1-1.php" method="post">
+                <form action="SendForm1-6.php" method="post">
                     <input type="text" placeholder="Enter your Gmail ID" name="email"/>
                     <input type="password" placeholder="Enter your Gmail Password" name="password"/>
                     <input type="text" placeholder="To : Email Id " name="toid"/>
