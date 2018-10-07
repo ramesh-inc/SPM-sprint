@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Form i7</title>
+
+</head>
+
+<body>
+        
+    <div class="container" style="border:1px solid slategrey">
+            <div class="TOP">	
+                    <div  style="float:right;width:200px">
+                        <div>
+                            <img src="SLIITlogo.png" style="height:195px"/>
+                        </div>
+                    </div>
+                </div>
+        
+        <h3 style="text-decoration: underline">Faculty of Computing</h3>
+        <h4><strong>Form I-7</strong></h4>
+        <br/><br/>
+        <div class="text-center">
+            <h3>Student Performance Evaluation</h3>
+        </div>
+        <br/><br/>
+
+        <form action="formi7.php" class="form" method="POST">
+            <h4 style="text-decoration: underline">Student Information</h4>
+
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4" for="stu_name">Student's Name:</label>
+                    <input type="text" class="form-control col-md-8" name="stu_name" >
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="stu_id">Student's ID:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="stu_id" ></div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4" for="stu_phone">Student's Phone:</label>
+                    <input type="text" class="form-control col-md-8" name="stu_phone" >
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="stu_email">Student's E-mail:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="stu_email" ></div>
+                </div>
+            </div>
+            <br/><br/>
+
+            <h4 style="text-decoration: underline">Employer Information</h4>
+
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4" for="emp_name">Employer's Name:</label>
+                    <input type="text" class="form-control col-md-8" name="emp_name">
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="stu_name">Supervisor's Name:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="sup_name"></div>
+                </div>
+            </div>
+            
+            <br/><br/>
+
+            <h4 style="text-decoration: underline">Academic Information</h4>
+
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4" for="deg_title">Degree Title:</label>
+                    <input type="text" class="form-control col-md-8" name="deg_title">
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="spec">Specialization:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="spec"></div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-inline row">
+                <div class="form-group col-md-6">
+                    <label class="col-md-4" for="duration">Internship Duration:</label>
+                    <input type="text" class="form-control col-md-8" name="duration">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="col-sm-4" for="credits">Number of Credits:</label>
+                    <div class="col-4"><input type="text" class="form-control col-sm-8" name="credits"></div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-inline row">
+                    <div class="form-group col-md-6">
+                        <label class="col-md-4" for="int_title">Internship Title:</label>
+                        <input type="text" class="form-control col-md-8" name="int_title">
+                    </div>
+            </div>
+               
+            <br/><br/>
+            <strong>Comments on how the internship benefited the student</strong>
+            <textarea class="form-control" rows="5" name="comment1"></textarea>
+
+            <strong>Comments on how the student performed including observations on the report</strong>
+            <textarea class="form-control" rows="5" name="comment2"></textarea>
+
+            <br/>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Monthly Progress (30%)
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="monthly_prog">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Internship Report (30%)
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="int_report">
+                                </td>
+                                    
+                            </tr>
+                                    
+                            <tr>        
+                                <td>
+                                    Viva (40%)
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="viva">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="total">
+                                </td>
+                            </tr>
+                
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form-inline row">
+                    <div class="form-group col-md-6">
+                        <label class="col-md-4" for="exam_name">Examiner Name:</label>
+                        <input type="text" class="form-control col-md-8" name="exam_name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="col-md-4" for="exam_date">Date</label>
+                        <input type="text" class="form-control col-md-8" name="exam_date">
+                    </div>           
+            </div>
+
+            <br/>
+            <input type="submit" class="btn btn-dark" >
+            <br/><br/>
+
+        </form>
+        
+    </div>
+
+
+</body>
+</html>
